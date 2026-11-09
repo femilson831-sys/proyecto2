@@ -140,7 +140,7 @@ class LoginController extends Controller
         );
 
         return redirect()
-            ->intended(route(DestinoPorRol::ruta($usuario)))
+            ->to(route(DestinoPorRol::ruta($usuario)))
             ->with(
                 'success',
                 'Bienvenido al sistema NANOS.'
