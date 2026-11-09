@@ -57,6 +57,8 @@ class Rol extends Model
                 'cajero',
                 'almacen',
                 'encargado-de-almacen',
+                'personal-de-almacen',
+                'personal-de-pesaje',
             ],
             true
         );
