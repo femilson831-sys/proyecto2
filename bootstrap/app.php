@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\AdministradorMiddleware;
+use App\Http\Middleware\RolMiddleware;
 use App\Http\Middleware\RegistrarActividadUsuario;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -35,6 +36,7 @@ return Application::configure(
          */
         $middleware->alias([
             'administrador' => AdministradorMiddleware::class,
+            'rol' => RolMiddleware::class,
         ]);
 
         /*
