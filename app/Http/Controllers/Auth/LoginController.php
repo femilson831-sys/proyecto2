@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Support\DestinoPorRol;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +20,7 @@ class LoginController extends Controller
     public function mostrarLogin()
     {
         if (Auth::check()) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route(DestinoPorRol::ruta(Auth::user()));
         }
 
         return view('auth.login');
@@ -139,7 +140,7 @@ class LoginController extends Controller
         );
 
         return redirect()
-            ->intended(route('admin.dashboard'))
+            ->intended(route(DestinoPorRol::ruta($usuario)))
             ->with(
                 'success',
                 'Bienvenido al sistema NANOS.'
