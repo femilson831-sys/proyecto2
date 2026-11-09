@@ -638,3 +638,9 @@ Route::middleware(['auth', 'administrador'])
         Route::get('/ventas/pagos', [VentaReporteController::class, 'cobros'])
             ->name('ventas.pagos');
     });
+// Panel independiente del personal de pesaje.
+require __DIR__ . '/pesaje.php';
+
+Route::middleware('auth')->get('/sin-panel', function () {
+    return response()->view('auth.sin-panel', [], 403);
+})->name('acceso.sin-panel');
