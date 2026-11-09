@@ -16,6 +16,18 @@ class RolesSistemaSeeder extends Seeder
                 'descripcion' => 'Acceso administrativo al sistema.',
             ],
             [
+                'nombre' => 'Personal de pesaje',
+                'descripcion' => 'Registro y etiquetado de productos por peso.',
+            ],
+            [
+                'nombre' => 'Encargado de almacén',
+                'descripcion' => 'Supervisión de almacenes e inventario.',
+            ],
+            [
+                'nombre' => 'Personal de almacén',
+                'descripcion' => 'Operaciones y tareas de almacén.',
+            ],
+            [
                 'nombre' => 'Cajero',
                 'descripcion' => 'Acceso a las operaciones de caja.',
             ],
